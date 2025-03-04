@@ -42,13 +42,3 @@ int chry_mempool_osal_sem_give(chry_mempool_osal_sem_t sem)
 
     return (ret == pdPASS) ? 0 : -1;
 }
-
-void *chry_mempool_osal_malloc(size_t size)
-{
-    return pvPortMalloc(size);
-}
-
-void chry_mempool_osal_free(void *ptr)
-{
-    vPortFree(ptr);
-}
